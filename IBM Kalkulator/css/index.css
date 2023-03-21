@@ -3,3 +3,42 @@ body {
     margin: 0;
     padding: 0;
 }
+
+h1 {
+    text-align: center;
+    font-family: cursive;
+}
+
+form {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px, solid, linear-gradient(red 20%, yellow 50%, green 75%, blue 100%);
+    border-radius: 5px;
+}
+
+/* memberi sedikit jarak pada kolom */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* memberikan efek bezel / sedikit 3d pada box */
+input[type="number"],
+select {
+    width 100%;
+    padding: 10px;
+    border: 1px, solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+button [type="submit"], {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px, 20px;
+    border: none
+    border-radius: 5px;
+    cursor: pointer;
+}
