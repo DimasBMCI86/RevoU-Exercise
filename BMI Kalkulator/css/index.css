@@ -1,0 +1,197 @@
+body {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.gel {
+    text-align: center;
+}
+.gel:hover {
+    text-align: center;
+    text-shadow:  0 0 5px #03e9f4,
+                  0 0 25px #03e9f4,
+                  0 0 50px #03e9f4,
+                  0 0 200px #03e9f4;
+-webkit-box-reflect:below 1px linear-gradient(transition, #0005);        
+}
+p {
+    padding: 20px;
+    text-align: left;
+    font-family: handwriting, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* form {
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px, solid, transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    border-radius: 5px;
+    background-color: #302244;
+    border-style: solid;
+} */
+
+.form {
+    height: 100vh;
+    aspect-ratio: 1 / 1.5;
+    background: var(--clr-1);
+    border-radius: 0.5rem;
+  
+    position: relative;
+  }
+  
+  .form::before,
+  .form::after {
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-4),
+      var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+  }
+  
+  .form::after {
+    filter: blur(3.5rem);
+  }
+  
+  @keyframes rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+  
+/* memberi sedikit jarak pada kolom */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* memberikan efek bezel / sedikit 3d pada box */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px, solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    padding: 30px 200px;
+    margin: 90px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+    margin-right: 50px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    align-content: center;
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transition, #0005);        
+    padding: 10px, 20px;
+    border-radius: 5px;
+    /* cursor: pointer; */
+}
+
+.sidebar .widget {
+	padding:25px;
+	margin:0 0 25px;
+	border-bottom: 2px solid #fff;
+	transition: all 0.5s ease;
+}
+ 
+.sidebar .widget:hover {
+	border-bottom: 2px solid #3498db;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transition, #0005);        
+}
+ 
+.sidebar .widget h2 {
+	padding:0;
+	margin:0 0 15px;
+	color:#3498db;
+	font-size: 18px;
+	font-weight:800;
+	text-transform: uppercase;
+}
+ 
+.sidebar .widget p {
+	font-size: 14px;
+}
+ 
+.sidebar .widget p:last-child {
+	margin:0;
+}
+
+#result:hover {
+    border: solid;
+    border-radius: 4px;
+    border-color: transparent;
+    text-align: center;
+    margin-top: auto;
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+pre {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+ 
+	.head {
+		position:inherit;
+	}
+ 
+	.wrap {
+		width: 90%;
+		margin:25px auto;
+	}
+	.sidebar {
+		width:100%;
+		margin:25px 0 0;
+		float:right;
+	}
+ 
+	.sidebar .widget {
+		padding:5%;
+	}
+}
