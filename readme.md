@@ -1,5 +1,11 @@
 
-# Changes on 4.2
+# BMI Kalkulator 
+
+#Changes on 4.3
+
+- Added responsive UI to Mobile
+
+# Changes on 4.2 and below
 
 - Added parallax features to the background.
 - Added reset button

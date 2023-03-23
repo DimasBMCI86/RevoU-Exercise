@@ -335,4 +335,71 @@ transition: 1.7s;
   to { stroke-dasharray: 200 200; }
 }
 
+/* Responsive website pada setiap ukuran layar */
+/* Untuk tampilan layar kecil */
+@media screen and (max-width: 600px) {
+  .canvas {
+    width: 100%;
+    height: auto;
+  }
+  
+  .ambi.bar {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .wave {
+  display: none;
+  }
+  
+  .BMI {
+    font-size: 20px;
+  }
+  
+  .tinggi, .berat, .gdr {
+    width: 100%;
+    margin: 5px;
+  }
+  
+  .hit, .res {
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+  }
+}
 
+/* Untuk tampilan layar besar */
+@media screen and (min-width: 600px) {
+  .canvas {
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .ambi.bar {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .wave {
+  display: none;
+  }
+  
+  .BMI {
+    font-size: 50px;
+  }
+  
+  .tinggi, .berat, .gdr {
+    width: 50%;
+    margin: 5px;
+  }
+  
+  .hit, .res {
+    width: 50%;
+    margin: 5px;
+    text-align: center;
+  }
+}
+/* ================== akhir dari responsive code */
