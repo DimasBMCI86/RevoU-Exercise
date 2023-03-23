@@ -1,5 +1,7 @@
 const form = document.querySelector('form');
 const result = document.querySelector('#result');
+// menambahkan variable reset
+// var $reset = $('#reset');
 
 // menambahkan event pada tombol submit
 form.addEventListener('submit', function(event) {
@@ -22,7 +24,7 @@ function calculateBMI(height, weight) {
 function getStatus(bmi, gender) {
     if (gender === 'male') {
       if (bmi < 20) {
-        return 'wah anda langsing...';
+        return 'wah anda kurus...';
     } else if (bmi < 25) {
         return 'berat anda normal';
     } else if (bmi < 30) {
@@ -43,4 +45,13 @@ function getStatus(bmi, gender) {
 }
 }
 
+
 document.getElementsByClassName("form");
+
+// membuat fungsi reset pada input form
+// $reset.on('click', function(e) {
+//     e.preventDefault();
+function clearResult(){
+    document.getElementById('height').value = "";
+    document.getElementById('weight').value = "";    
+}

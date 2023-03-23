@@ -1,63 +1,77 @@
 <!doctype html>
 <html>
     <head>
-        <!--bilah judul dan fungsi link untuk memanggil file index.css serta link library dari fa 4-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--bilah judul dan fungsi link untuk memanggil file index.css serta link library dari fa 6.3-->
         <title>BMI Kalkulator</title>
-        <link rel="stylesheet" href="IBM Kalkulator/css/index.css">
+        <link rel="stylesheet" href="BMI Kalkulator/css/air.css">
+        <link rel="stylesheet" href="BMI Kalkulator/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
     <body>
-        <div class="gel">
-        <h1>Kalkulator BMI</h1>
+        <div class="canvas">
+            <div class="ambi bar">
+            <form action="#">
+                <div class="BMI" data-text="BMI">Kalkulator</div> 
+                <div class="tinggi">
+                    <i class="fa fa-solid fa-pencil"></i>
+                    <input style="text-align: center;" type="number" id="height" name="height" placeholder="Tinggi (cm)" required>
+                </div>
+                <div class="berat">
+                    <i class="fa fa-solid fa-weight-scale"></i>
+                    <input style="text-align: center;" type="number" id="weight" name="weight" placeholder="Berat (kg)" required>
+                </div>
+                <div class="wave">
+                    <span style="--i:1">J</span>
+                    <span style="--i:2">e</span>
+                    <span style="--i:3">n</span>
+                    <span style="--i:4">i</span>
+                    <span style="--i:5">s </span>
+                    <span style="--i:6"></span>
+                    <span style="--i:7">K</span>
+                    <span style="--i:8">e</span>
+                    <span style="--i:9">l</span>
+                    <span style="--i:10">a</span>
+                    <span style="--i:11">m</span>
+                    <span style="--i:12">i</span>
+                    <span style="--i:13">n</span>
+                    <span style="--i:14">:</span>
+              </div>
+                <!--menambahkan fungsi select untuk memilih opsi pada value yang di berikan-->
+                <div class="gdr">
+                    <select id="gender" name="gender">
+                        <option value="male">laki laki</option>
+                        <option value="female">perempuan</option>
+                    </select>
+                </div>
+                <h5>Hasil tertera dibawah.</h5>
+                <div class="hit">
+                    <button type="submit id="calculate">
+                        <a href="#"><span>Hitung</span></a>
+                    </button>
+                </div>
+                <div class="res">
+                    <button id="reset" data-title="Konfirmasi" onclick="clearResult()">
+                        <span>Reset</span>
+                    </button>
+                </div>
+            </form>
+            </div>
         </div>
-        <p>Banyak perubahan kebiasaan yang berdampak pada kita, salah satunya terhadap kesehatan kita. Tentu saja dampak ini tidak semuanya baik dan tidak semuanya buruk, seperti contohnya banyak dari kita yang ternyata tidak lagi sakit batuk dan flu sepanjang tahun, padahal biasanya setiap tahun minimal 2 atau 3 kali mengalami batuk dan flu, ada juga yang merasa lebih bugar karena memiliki banyak waktu berolahraga bersama keluarga di rumah, dan masih banyak lainnya. Namun ternyata tidak semua dampak baik dirasakan oleh kita, ada juga dampak yang kurang baik seperti peningkatan berat badan yang signifikan.</p>
-        <div class="form">
-        <form>
-            <label for="height">Tinggi (cm)</label>
-            <br>
-            <i class="fa fa-solid fa-weight-scale"></i>
-            <input type="number" id="height" name="height" placeholder="Masukkan Angka" required>
-            <br>
-            <label for="weight">Berat (kg)</label>
-            <br>
-            <i class="fa-solid fa-weight-scale"></i><input type="number" id="weight" name="weight" placeholder="Masukkan Angka" required>
-            <br>
-            <label for="gender">Jenis Kelamin:</label>
-            <br>
-            <!--menambahkan fungsi select untuk memilih opsi pada value yang di berikan-->
-            <select id="gender" name="gender">
-            <option value="male">laki laki</option>
-            <option value="female">perempuan</option>
-            </select>
-            <br>
-            <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <button type="submit" id="calculate">Hitung Hasil</button>
-            </a>
-        </form>
-        </div>
-        <!-- bagian sidebar website -->
-		<aside class="sidebar">
-			<div class="widget">
-        <h2>Definisi BMI</h2>
-        <p>BMI ini adalah nilai yang berasal dari massa (berat) dan tinggi badan seseorang. BMI didefinisikan sebagai massa tubuh dibagi dengan kuadrat tinggi badan, dan secara universal dinyatakan dalam satuan kg / m2, dihasilkan dari massa dalam kilogram dan tinggi dalam meter. Rentang Berat Badan berdasarkan Index Massa Tubuh (BMI) dibagi menjadi :</p>
-        <pre>
-           - Berat Badan Kurang : BMI kurang dari 18.5
-           - Berat Badan Normal : BMI diantara 18.5 sampai 24.9
-           - Berat Badan Lebih : BMI diantara 25 sampai 29.9
-           - Obesitas : BMI lebih dari 30
-        </pre>
-        </div>
-        <!-- akhir dari sidebar website -->
-        <!--memanggil fungsi dari index.js setelah adanya indikasi input / form sudah terisi-->
         <div id="result"></div>
-        <script src="index.js"></script>
+    <label style="color: cyan;">Definisi BMI</label>
+    <p style="color: white;">BMI ini adalah nilai yang berasal dari massa (berat) dan tinggi badan seseorang. BMI didefinisikan sebagai massa tubuh dibagi dengan kuadrat tinggi badan, dan secara universal dinyatakan dalam satuan kg / m2, dihasilkan dari massa dalam kilogram dan tinggi dalam meter. Rentang Berat Badan berdasarkan Index Massa Tubuh (BMI) dibagi menjadi :</p>
+    <p style="color: white;">           - Berat Badan Kurang : BMI kurang dari 18.5
+        - Berat Badan Normal : BMI diantara 18.5 sampai 24.9
+        - Berat Badan Lebih : BMI diantara 25 sampai 29.9
+        - Obesitas : BMI lebih dari 30</p>
+
+        
+        </p>
     </body>
-    <footer>
-        <label id="tutor">Cara Menggunakan Kalkulator BMI</label>
-        <p>Untuk menggunakan Tools kalkulator ini, silahkan input angka pada bagian tinggi dan berat lalu klik tombol submit</p>
-    </footer>
+    
+    <!--memanggil fungsi dari index.js setelah adanya indikasi input / form sudah terisi-->
+    <script src="BMI Kalkulator/js/index.js"></script>
 </html>
