@@ -370,7 +370,7 @@ transition: 1.7s;
 }
 
 /* Untuk tampilan layar besar */
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
   .canvas {
     width: 600px;
     height: auto;
@@ -401,5 +401,5 @@ transition: 1.7s;
     margin: 5px;
     text-align: center;
   }
-}
+} */
 /* ================== akhir dari responsive code */
